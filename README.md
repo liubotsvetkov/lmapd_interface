@@ -20,6 +20,8 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
   * Install the dependencies of LMAPD by running `opkg install` and the file path
   * Install LMAPD by running `opkg install compiled_packages/simet-lmapd_0.1.2-1_x86_64.ipk`
  
+ ### Usage
+ 
  ### Todo's
   - A menu, designed for advanced users, targeting people who are familiar with the structure of the configuration file of lmapd
   - Support for further measurement tasks besides `ping` and `traceroute`
