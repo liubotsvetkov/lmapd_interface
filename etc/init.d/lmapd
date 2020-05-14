@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+START=95
+
+start(){
+	mkdir -p /tmp/lmapd/
+	lmapd -j -b /usr/share/lmapd/capabilities.json -r /var/run -q /tmp/lmapd -c /usr/share/lmapd/lmapd-config.json -f
+}
+
+stop(){
+	lmapctl -c /usr/share/lmapd/lmapd-config.json -r /var/run -q /tmp/lmapd shutdown
+}
+
+restart(){
+	if !(lmapctl -c /usr/share/lmapd/lmapd-config.json -r /var/run -q /tmp/lmapd reload;) then
+		/etc/init.d/lmapd start
+	fi
+}

@@ -1,0 +1,257 @@
+{
+   "ietf-lmap-control:lmap": {
+     "tasks": {
+       "task": [
+         {
+           "function": [
+           ],
+           "program": "\/bin\/ping",
+           "name": "ping",
+           "version": "0.6"
+         },
+         {
+           "function": [
+           ],
+           "program": "\/bin\/traceroute",
+           "name": "traceroute",
+           "version": "0.6"
+         },
+         {
+           "version": "0.1",
+           "program": "\/bin\/lmap_reporter",
+           "name": "lmap_reporter"
+         }
+       ]
+     },
+     "agent": {
+       "agent-id": "587d9c7e-c65e-4d9c-a9c6-9aac1774287b",
+       "report-group-id": true,
+       "group-id": "42",
+       "report-agent-id": false
+     },
+     "events": {
+       "event": [
+         {
+           "name": "every_minute",
+           "periodic": {
+             "interval": 60
+           }
+         },
+         {
+           "name": "basic_event_basictask1",
+           "periodic": {
+             "interval": 300
+           }
+         },
+         {
+           "name": "basic_event_basictask2",
+           "calendar": {
+             "minute": [
+               "*"
+             ],
+             "month": [
+               "*"
+             ],
+             "day-of-week": [
+               "*"
+             ],
+             "second": [
+               0
+             ],
+             "hour": [
+               "*"
+             ],
+             "day-of-month": [
+               "*"
+             ]
+           }
+         },
+         {
+           "name": "basic_event_baz",
+           "periodic": {
+             "interval": 300
+           }
+         },
+         {
+           "name": "basic_event_foo",
+           "periodic": {
+             "interval": 300
+           }
+         },
+         {
+           "name": "basic_event_basictask8",
+           "periodic": {
+             "interval": 300
+           }
+         }
+       ]
+     },
+     "schedules": {
+       "schedule": [
+         {
+           "start": "every_minute",
+           "action": [
+             {
+               "option": [
+               ],
+               "task": "lmap_reporter",
+               "name": "action_report"
+             }
+           ],
+           "name": "report_primary",
+           "execution-mode": "parallel"
+         },
+         {
+           "start": "basic_event_basictask1",
+           "action": [
+             {
+               "option": [
+                 {
+                   "id": "basic_option_basictask1_ping_count",
+                   "name": "-c",
+                   "value": "4"
+                 },
+                 {
+                   "id": "basic_option_basictask1_ping_size",
+                   "name": "-s",
+                   "value": "32"
+                 },
+                 {
+                   "id": "hostname",
+                   "value": "8.8.8.8"
+                 }
+               ],
+               "destination": [
+                 "report_primary"
+               ],
+               "task": "ping",
+               "name": "basic_action_basictask1"
+             }
+           ],
+           "name": "basic_schedule_basictask1",
+           "execution-mode": "sequential"
+         },
+         {
+           "start": "basic_event_basictask2",
+           "action": [
+             {
+               "option": [
+                 {
+                   "id": "basic_option_basictask2_ping_count",
+                   "name": "-c",
+                   "value": "4"
+                 },
+                 {
+                   "id": "basic_option_basictask2_ping_size",
+                   "name": "-s",
+                   "value": "32"
+                 },
+                 {
+                   "id": "hostname",
+                   "value": "8.8.8.8"
+                 }
+               ],
+               "destination": [
+                 "report_primary"
+               ],
+               "task": "ping",
+               "name": "basic_action_basictask2"
+             }
+           ],
+           "name": "basic_schedule_basictask2",
+           "execution-mode": "sequential"
+         },
+         {
+           "start": "basic_event_baz",
+           "action": [
+             {
+               "option": [
+                 {
+                   "id": "basic_option_baz_ping_count",
+                   "name": "-c",
+                   "value": "4"
+                 },
+                 {
+                   "id": "basic_option_baz_ping_size",
+                   "name": "-s",
+                   "value": "32"
+                 },
+                 {
+                   "id": "hostname",
+                   "value": "8.8.8.8"
+                 }
+               ],
+               "destination": [
+                 "report_primary"
+               ],
+               "task": "ping",
+               "name": "basic_action_baz"
+             }
+           ],
+           "name": "basic_schedule_baz",
+           "execution-mode": "sequential"
+         },
+         {
+           "start": "basic_event_foo",
+           "action": [
+             {
+               "option": [
+                 {
+                   "id": "basic_option_foo_ping_count",
+                   "name": "-c",
+                   "value": "4"
+                 },
+                 {
+                   "id": "basic_option_foo_ping_size",
+                   "name": "-s",
+                   "value": "32"
+                 },
+                 {
+                   "id": "hostname",
+                   "value": "8.8.8.8"
+                 }
+               ],
+               "destination": [
+                 "report_primary"
+               ],
+               "task": "ping",
+               "name": "basic_action_foo"
+             }
+           ],
+           "name": "basic_schedule_foo",
+           "execution-mode": "sequential"
+         },
+         {
+           "start": "basic_event_basictask8",
+           "action": [
+             {
+               "option": [
+                 {
+                   "id": "basic_option_basictask8_ping_count",
+                   "name": "-c",
+                   "value": "4"
+                 },
+                 {
+                   "id": "basic_option_basictask8_ping_size",
+                   "name": "-s",
+                   "value": "32"
+                 },
+                 {
+                   "id": "hostname",
+                   "value": "8.8.8.8"
+                 }
+               ],
+               "destination": [
+                 "report_primary"
+               ],
+               "task": "ping",
+               "name": "basic_action_basictask8"
+             }
+           ],
+           "name": "basic_schedule_basictask8",
+           "execution-mode": "sequential"
+         }
+       ]
+     }
+   }
+ }

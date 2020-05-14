@@ -1,0 +1,28 @@
+{
+  "ietf-lmap-control:lmap": {
+        "capabilities":
+        {"tasks":{
+          "task":[
+            {
+            "name" : "ping",
+            "function": [
+              ],
+            "version": "0.6",
+            "program": "/bin/ping"
+          },
+          {
+            "name": "traceroute",
+            "function": [
+            ],
+            "version": "0.6",
+            "program": "/bin/traceroute"
+          },
+	  {
+	     "name" : "lmap_reporter",
+	     "program" : "/bin/lmap_reporter",
+             "version": "0.1"
+	  }
+        ]
+      }
+    }
+}  }

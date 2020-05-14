@@ -1,0 +1,26 @@
+{
+    "luci-app-lmapd": {
+	"description": "Grant access to lmapd configuration",
+	"read": {
+	    "cgi-io": [ "exec", "download" ],
+	    "file": {
+		"/usr/share/lmapd/lmapctl.sh status": [ "exec" ],
+		"/etc/init.d/lmapd start": [ "exec" ],
+		"/var/run/lmapd-state.json": [ "read" ],
+		"/tmp/lmapd/report_primary/*": [ "read" ],
+		"/var/run/lmapd.pid": [ "read" ],
+		"lua /usr/lib/lua/lmapd/generateJson.lua": [ "exec" ],
+		"/usr/bin/lua /usr/lib/lua/lmapd/get_results_filenames.lua *": [ "exec" ],
+		"/usr/bin/lua /usr/lib/lua/lmapd/delete_results.lua *": [ "exec" ]
+	    },
+	    "uci": [
+		"lmapd"
+	    ]	
+	},
+	"write": {
+	    "uci": [
+		"lmapd"
+	    ]
+	}
+    }
+}
