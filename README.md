@@ -26,4 +26,4 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
   - A menu, designed for advanced users, targeting people who are familiar with the structure of the configuration file of lmapd
   - Support for further measurement tasks besides `ping` and `traceroute`
   - The option to add multiple actions in a schedule
-  - A survey could be made with users from different backgrounds in order to improve the user-friendliness of the interface
+  - A survey with users from different backgrounds in order to improve the user-friendliness of the interface
