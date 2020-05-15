@@ -15,7 +15,7 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
   * `/usr/share/lmapd` in `/usr/share`
   * `/usr/share/luci/menu.d/luci-app-lmapd.json` in `/usr/share/luci/menu.d`
   * `/usr/share/rpcd/acl.d/luci-app-lmapd.json` in `/usr/share/rpcd/acl.d`
-  * `/www/luci/static/resources/view/lmapd` in `/www/luci/static/resources/view`
+  * `/www/luci/static/resources/view/lmapd` in `/www/luci-static/resources/view`
 - LMAPD and its dependencies in ipk format are located in directory `/compiled_packages`
   * Install the dependencies of LMAPD by running `opkg install` and the file path.
   * Install LMAPD by running `opkg install compiled_packages/simet-lmapd_0.1.2-1_x86_64.ipk`.
