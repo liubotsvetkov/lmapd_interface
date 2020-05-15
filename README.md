@@ -22,6 +22,8 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
  
  ### Usage
  
+ ### Note
+  * Check the access rights of the copied files
  ### Todo's
   - A menu, designed for advanced users, targeting people who are familiar with the structure of the configuration file of lmapd
   - Support for further measurement tasks besides `ping` and `traceroute`
