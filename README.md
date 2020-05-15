@@ -4,7 +4,6 @@ Interface enabling configuration of the LMAP daemon through the OpenWrt LuCI Web
 I have provided a working OpenWrt image containing lmapd and the UI for lmapd, built using client-side rendering.
 
 ### Installation
-
 - Use OpenWrt buildroot to compile an OpenWrt image
   * Change LuCI source to LuCI master branch by following the procedures given on [LuCI master branch](https://github.com/openwrt/luci.git)
 - Place the files from this repository at the respective location on your OpenWrt system
@@ -19,9 +18,8 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
 - LMAPD and its dependencies in ipk format are located in directory `/compiled_packages`
   * Install the dependencies of LMAPD by running `opkg install` and the file path
   * Install LMAPD by running `opkg install compiled_packages/simet-lmapd_0.1.2-1_x86_64.ipk`
- 
  ### Usage
- 
+ to see the OpenWrt user interface (UI), go to https://your.server.ip/cgi-bin/luci
  ### Note
   * Check the access rights of the copied files
  ### Todo's
