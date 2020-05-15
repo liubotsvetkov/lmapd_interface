@@ -21,7 +21,7 @@ I have provided a working OpenWrt image containing lmapd and the UI for lmapd, b
  ### Usage
  to see the OpenWrt user interface (UI), go to https://your.server.ip/cgi-bin/luci
  ### Note
-  * Check the access rights of the copied files
+  * Check the execute rights of the copied files
  ### Todo's
   - A menu, designed for advanced users, targeting people who are familiar with the structure of the configuration file of lmapd
   - Support for further measurement tasks besides `ping` and `traceroute`
