@@ -454,14 +454,12 @@ return L.view.extend({
 	
 	    return uci.save().then(() => {
 		//transfer the changes to the server
-		uci.apply();
-		ui.addNotification(null, [
-		    E('p', [ 'Task is successfully added' ])
-		]);
-		convertUciToJson().then((res) => {
-		    console.log(res);
-		}).catch((err) => {
-		    console.log(err.message);
+		uci.apply().then(() => {
+		    convertUciToJson().then((res) => {
+			ui.addNotification(null, [
+			    E('p', [ 'Task is successfully added' ])
+			]);
+		    });
 		});
 	    });
 	});
