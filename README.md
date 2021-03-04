@@ -1,7 +1,7 @@
 # OpenWrt LuCI Support for the LMAP Daemon
 Interface enabling configuration of the LMAP daemon through the OpenWrt LuCI WebUI.
 
-I have provided a working OpenWrt image containing lmapd and the UI for lmapd, built using client-side rendering approach. The paper can also be found in the repository.
+I have provided a working OpenWrt image containing lmapd and the UI for lmapd, built using client-side rendering approach. The BSc Thesis paper can also be found in the repository.
 
 ### Installation
 - Use OpenWrt buildroot to compile an OpenWrt image
